@@ -58,3 +58,70 @@ body{
 
     border-radius: 0 0 1em 1em;
 }
+
+#section-two {
+    height: 3.3em;
+    width: 12em;
+    /* background-color: blue; */
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+#turn-button-section {
+    height: 2.2em;
+    width: 2.2em;
+    background-color: gray;
+
+    border-radius: 50%;
+    box-shadow: 0.3em 0.3em 0.3em rgba(0, 0, 0, 0.176);
+}
+
+#section-three {
+    height: 8em;
+    width: 12em;
+
+    /* background-color: rgb(82, 146, 108); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bg-circle-section {
+    height: 7em;
+    width: 7em;
+    background-color: gray;
+    border-radius: 50%;
+    box-shadow: 0.3em 0.3em 0.3em rgba(0, 0, 0, 0.176);
+
+    display: flex;
+    flex-direction: row;
+}
+
+#bg-circle-section-one {
+    height: 7em;
+    width: 2em;
+
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#button-left-cicle-section {
+    height: 6em;
+    width: 2em;
+
+    border-radius: 15em 0 0 15em;
+
+    color: white;
+
+    /* background-color: black; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
