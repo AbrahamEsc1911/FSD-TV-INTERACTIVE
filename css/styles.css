@@ -1,4 +1,4 @@
-body{
+body {
     height: 100vh;
     width: 100 vw;
 
@@ -14,14 +14,14 @@ body{
 
 /* CONTROL */
 
-.bg-tv{
+.bg-tv {
     height: 100vh;
     width: 70vw;
 
     background-color: orange;
 }
 
-.bg-control{
+.bg-control {
     height: 100vh;
     width: 30vw;
 
@@ -40,8 +40,10 @@ body{
 
     border-radius: 1.5em;
 }
+/* 
+IR-SECTION */
 
-#section-one{
+#section-one {
     height: 1.5em;
     width: 12em;
     /* background-color: blue; */
@@ -59,6 +61,7 @@ body{
     border-radius: 0 0 1em 1em;
 }
 
+/* TURN-ON-BUTTON-CIRCLE */
 #section-two {
     height: 3.3em;
     width: 12em;
@@ -66,7 +69,7 @@ body{
 
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 }
 
 #turn-button-section {
@@ -104,14 +107,14 @@ body{
     height: 7em;
     width: 2em;
 
-    background-color: orange;
+    /* background-color: orange; */
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-#button-left-cicle-section {
+#button-left-circle-section {
     height: 6em;
     width: 2em;
 
@@ -125,3 +128,86 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+#bg-circle-section-two {
+    height: 7em;
+    width: 3em;
+
+    /* background-color: green; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#bg-top-circle-section {
+    height: 2em;
+    width: 2em;
+
+    border-radius: 50%;
+
+    color: white;
+
+    /* background-color: black; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bg-middle-circle-section {
+    height: 3em;
+    width: 3em;
+
+    border-radius: 50%;
+
+    color: white;
+
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bg-bottom-circle-section {
+    height: 2em;
+    width: 2em;
+
+    border-radius: 50%;
+
+    color: white;
+
+    /* background-color: black; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#bg-circle-section-three {
+    height: 7em;
+    width: 2em;
+
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button-rigth-circle-section {
+    height: 6em;
+    width: 2em;
+
+    border-radius: 0 15em 15em 0;
+
+    color: white;
+
+    /* background-color: black; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
