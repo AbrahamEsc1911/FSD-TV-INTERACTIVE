@@ -458,3 +458,60 @@ IR-SECTION */
 
 /* IR SECTION */
 
+#bg-ir-tv {
+    height: 0.7em;
+    width: 45em;
+/* 
+    background-color: green; */
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#bg-ir{
+    height: 0.7em;
+    width: 12em;
+
+    background-color: rgb(5, 5, 5);
+}
+
+/* SUPPORT TV */
+
+#section-tv-three{
+    height: 3.7em;
+    width: 45em;
+
+    /* background-color: pink; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bg-tv-support {
+    height: 3.7em;
+    width: 2em;
+
+    background-color: black;
+}
+
+#section-tv-four {
+    height: 1em;
+    width: 45em;
+
+    /* background-color: brown; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bg-base-tv{
+    height: 0.6em;
+    width: 28em;
+
+    border-radius: 2em 2em 0.1em 0.1em;
+
+    background-color: black;
+}
