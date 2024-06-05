@@ -515,3 +515,9 @@ IR-SECTION */
 
     background-color: black;
 }
+
+.general-buttons:hover {
+   cursor: pointer;
+    background-color: rgba(106, 106, 106, 0.224);
+    transition: all 0.5s;
+}
