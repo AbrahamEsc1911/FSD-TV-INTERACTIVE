@@ -20,7 +20,7 @@ body {
     height: 100vh;
     width: 30vw;
 
-    background-color: blueviolet;
+    background-color: rgb(43, 226, 174);
 
     display: flex;
     justify-content: center;
@@ -404,7 +404,7 @@ IR-SECTION */
     height: 100vh;
     width: 70vw;
 
-    background-color: orange;
+    background-color: rgb(234, 234, 234);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -474,6 +474,28 @@ IR-SECTION */
     width: 12em;
 
     background-color: rgb(5, 5, 5);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.tv-ligth-turned-off{
+    height: 0.3em;
+    width: 0.3em;
+
+    border-radius: 50%;
+
+    background-color: rgb(255, 0, 0);
+}
+
+.tv-ligth-turned-on{
+    height: 0.3em;
+    width: 0.3em;
+
+    border-radius: 50%;
+
+    background-color: rgb(38, 255, 0);
 }
 
 /* SUPPORT TV */
