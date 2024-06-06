@@ -447,13 +447,19 @@ IR-SECTION */
     justify-content: center;
 }
 
-#bg-Screen {
+#Screen {
     height: 25em;
     width: 44em;
 
     margin-bottom: 1em;
 
     background-color: black;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    position: relative;
 }
 
 /* IR SECTION */
@@ -480,7 +486,7 @@ IR-SECTION */
     justify-content: center;
 }
 
-.tv-ligth-turned-off{
+.tv-led-off{
     height: 0.3em;
     width: 0.3em;
 
@@ -489,7 +495,7 @@ IR-SECTION */
     background-color: rgb(255, 0, 0);
 }
 
-.tv-ligth-turned-on{
+.tv-led-on{
     height: 0.3em;
     width: 0.3em;
 
@@ -542,4 +548,27 @@ IR-SECTION */
    cursor: pointer;
     background-color: rgba(106, 106, 106, 0.224);
     transition: all 0.5s;
+}
+
+/* VIDEOS */
+
+#size-screen {
+    height: 25em;
+    width: 44em;
+    
+}
+
+#Canal{
+    height: 3em;
+    width: 42em;
+
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    
+    margin-top: 1em;
+    padding-left: 2em;
+    border-radius: 2em;
+
+    position: absolute;
+
 }
