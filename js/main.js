@@ -13,11 +13,19 @@ let year = today.getFullYear();
 let currentDate = `${day}/${month}/${year}`;
 let infoDate = document.getElementById("info")
 
+// SCREEN
 let screen = document.getElementById("Screen");
-let chanelUp = document.getElementById("chanel-up");
-let countUp = 0;
 
+// CHANNEL
+let chanelUp = document.getElementById("chanel-up");
+let countUp = 1;
 let chanelDown = document.getElementById("chanel-down");
+
+// VOLUMEN
+let volUp = document.getElementById("vol-up");
+let volDown = document.getElementById("vol-down");
+let countVol = 0;
+let volumenTotal = document.getElementById("volumen")
 
 
 
@@ -61,7 +69,7 @@ chanelUp.addEventListener("click", () => {
 
 chanelDown.addEventListener("click", () => {
     if (interruptor && countUp >= 2) {
-        countUp -= 1 >= 1
+        countUp -= 1 
         screen.innerHTML = `<img id="size-screen" src="./img/ch${countUp}.gif" alt="inicial"><div id="Canal">Canal ${countUp}</div>`
     } else if (interruptor && countUp <= 2) {
         screen.innerHTML = `<img id="size-screen" src="./img/ch${countUp}.gif" alt="inicial"><div id="Canal">Canal ${countUp}</div>`
@@ -70,11 +78,48 @@ chanelDown.addEventListener("click", () => {
     }
 })
 
+volUp.addEventListener("click", () => {
+    if (interruptor && countVol <= 3) {
+        countVol += 1
+        volumenTotal.classList.add(`volumen${countVol}`)
+        volumenTotal.innerHTML = ``
+        console.log(volumenTotal)
+    } else {
+        null
+    }
+})
+
+volDown.addEventListener("click", () => {
+    if(interruptor && countVol >= 1){
+        countVol = countVol - 1
+        volumenTotal.classList.remove(`volumen${countVol+1}`)
+        volumenTotal.innerHTML = ``
+        console.log(`le he dado al vol down y count vale ${countVol}`)
+    } else if (interruptor && countVol == 0) {
+        volumenTotal.innerHTML = `<img id="volumen" src="./img/mute.png" alt="mute">`
+    } else {
+        null
+    }
+        
+})
+// volDown.addEventListener("click", () => {
+//     if (interruptor) {
+//         countVol -= 1
+//         volumenTotal.classList.replace(`volumen${countVol}`)
+//     } else {
+//         null
+//     }
+// })
+
+
+
+
+
 infobtn.addEventListener("click", () => {
-  if(interruptor)  {
-    infoDate.classList.toggle("hide-info-temporary")
-    infoDate.innerHTML = `<p>fecha: ${currentDate}</p>`
-  } else{
-    null
-  }
+    if (interruptor) {
+        infoDate.classList.toggle("hide-info-temporary")
+        infoDate.innerHTML = `<p>fecha: ${currentDate}</p>`
+    } else {
+        null
+    }
 })
