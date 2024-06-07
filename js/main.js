@@ -5,12 +5,19 @@ let btns = document.getElementsByClassName("general-buttons");
 let arrayBtns = Array.from(btns);
 
 let netflix = document.getElementById("netflix-btn");
+let infobtn = document.getElementById("info-btn")
+let today = new Date();
+let day = today.getDate();
+let month = today.getMonth() + 1;
+let year = today.getFullYear();
+let currentDate = `${day}/${month}/${year}`;
+let infoDate = document.getElementById("info")
 
 let screen = document.getElementById("Screen");
-let chanelUp = document.getElementById("chanel-up")
+let chanelUp = document.getElementById("chanel-up");
 let countUp = 0;
 
-let chanelDown = document.getElementById("chanel-down")
+let chanelDown = document.getElementById("chanel-down");
 
 
 
@@ -18,6 +25,7 @@ onOfButton.addEventListener("click", () => {
     interruptor = !interruptor;
     tvLed.classList.toggle("tv-led-on")
     screen.innerHTML = `<img id="size-screen" src="./img/on.gif" alt="inicial">`
+    infoDate.classList.toggle("info-hide")
     !interruptor
         ? screen.innerHTML = ``
         : null
@@ -60,4 +68,13 @@ chanelDown.addEventListener("click", () => {
     } else {
         null
     }
+})
+
+infobtn.addEventListener("click", () => {
+  if(interruptor)  {
+    infoDate.classList.toggle("hide-info-temporary")
+    infoDate.innerHTML = `<p>fecha: ${currentDate}</p>`
+  } else{
+    null
+  }
 })

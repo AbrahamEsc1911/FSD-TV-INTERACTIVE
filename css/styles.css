@@ -459,7 +459,37 @@ IR-SECTION */
     justify-content: flex-start;
     align-items: flex-start;
 
+    position: absolute;
+    z-index: 1;
+}
+
+#info{
+    height: 2em;
+    width: 10em;
+
+    /* background-color: blueviolet; */
+    color: white;
+    font-weight: bolder;
+
+    margin-left: 30em;
+    margin-bottom: 22em;
+
     position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.info-hide{
+    display: none;
+    visibility: hidden;
+}
+
+.hide-info-temporary{
+    display: none;
+    visibility: hidden;
 }
 
 /* IR SECTION */
