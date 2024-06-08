@@ -36,6 +36,15 @@ body {
     border-radius: 1.5em;
 }
 
+.btn-hover:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.09);
+}
+
+.netflix-hover:hover{
+    cursor: pointer;
+    background-color: rgba(251, 0, 0, 0.692);
+}
 /* 
 IR-SECTION */
 
@@ -500,6 +509,7 @@ IR-SECTION */
     visibility: hidden;
     transition-duration: 1s;
 }
+
 
 #Screen {
     height: 25em;
