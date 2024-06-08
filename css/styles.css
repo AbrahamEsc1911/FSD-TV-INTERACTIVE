@@ -490,6 +490,17 @@ IR-SECTION */
     z-index: 3;
 }
 
+.volumen-hide {
+    visibility: hidden;
+    transition: all 0;
+    display: none;
+}
+
+.volumen-hide-transition {
+    visibility: hidden;
+    transition-duration: 1s;
+}
+
 #Screen {
     height: 25em;
     width: 44em;

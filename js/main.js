@@ -34,6 +34,7 @@ onOfButton.addEventListener("click", () => {
     tvLed.classList.toggle("tv-led-on")
     screen.innerHTML = `<img id="size-screen" src="./img/on.gif" alt="inicial">`
     infoDate.classList.toggle("info-hide")
+    volumenTotal.classList.toggle("volumen-hide")
     !interruptor
         ? screen.innerHTML = ``
         : null
@@ -52,6 +53,9 @@ netflix.addEventListener("click", () => {
         ? screen.innerHTML = `<img id="size-screen" src="./img/net.gif" alt="inicial">`
         : null
 })
+
+{/* <video id="size-screen" autoplay muted loop><source src="./img/ch6.mp4" type="video/mp4">
+Your browser does not support the video tag.</video> */}
 
 
 chanelUp.addEventListener("click", () => {
@@ -79,6 +83,7 @@ chanelDown.addEventListener("click", () => {
 })
 
 volUp.addEventListener("click", () => {
+    volumenTotal.classList.remove("volumen-hide-transition") 
     if (interruptor && countVol <= 3) {
         countVol += 1
         volumenTotal.classList.add(`volumen${countVol}`)
@@ -90,6 +95,7 @@ volUp.addEventListener("click", () => {
 })
 
 volDown.addEventListener("click", () => {
+    volumenTotal.classList.remove("volumen-hide-transition")
     if(interruptor && countVol >= 1){
         countVol = countVol - 1
         volumenTotal.classList.remove(`volumen${countVol+1}`)
@@ -102,16 +108,14 @@ volDown.addEventListener("click", () => {
     }
         
 })
-// volDown.addEventListener("click", () => {
-//     if (interruptor) {
-//         countVol -= 1
-//         volumenTotal.classList.replace(`volumen${countVol}`)
-//     } else {
-//         null
-//     }
-// })
 
+volUp.addEventListener("mouseleave", () => {
+    volumenTotal.classList.add("volumen-hide-transition")
+})
 
+volDown.addEventListener("mouseleave", () => {
+    volumenTotal.classList.add("volumen-hide-transition")
+})
 
 
 
