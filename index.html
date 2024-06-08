@@ -13,13 +13,19 @@
         <div id="body-tv">
             <div id="section-tv-one">
                 <div id="bg-frame-tv">
-                    <div id="bg-Screen"></div>
+                    <div id="info" class="info-hide"></div>
+                    <div id="volumen" class="volumen-hide">
+                    </div>
+                    <div id="Screen">
+                    </div>
                 </div>
-                
+
             </div>
             <div id="section-tv-two">
                 <div id="bg-ir-tv">
-                    <div id="bg-ir"></div>
+                    <div id="bg-ir">
+                        <div id="tv-led" class="tv-led-off"></div>
+                    </div>
                 </div>
             </div>
             <div id="section-tv-three">
@@ -62,7 +68,7 @@
                     <div id="label-botton-chan-vol">
                         <h6>CHAN</h6>
                     </div>
-                    <div id="chanel-down">-</div>
+                    <div id="chanel-down" class="chanel-btn">-</div>
                 </div>
                 <div id="vol-buttons">
                     <div id="vol-up">+</div>
@@ -75,14 +81,14 @@
             </div>
             <div id="section-five">
                 <div class="panel-buttons">
-                    <div class="buttons-numbers">1</div>
-                    <div class="buttons-numbers">2</div>
-                    <div class="buttons-numbers">3</div>
+                    <div class="buttons-numbers general-buttons">1</div>
+                    <div class="buttons-numbers general-buttons">2</div>
+                    <div class="buttons-numbers general-buttons">3</div>
                 </div>
                 <div class="panel-buttons">
-                    <div class="buttons-numbers">4</div>
-                    <div class="buttons-numbers">5</div>
-                    <div class="buttons-numbers">6</div>
+                    <div class="buttons-numbers general-buttons">4</div>
+                    <div class="buttons-numbers general-buttons">5</div>
+                    <div class="buttons-numbers general-buttons">6</div>
                 </div>
             </div>
             <div id="section-six">
@@ -90,15 +96,17 @@
                 <div></div>
             </div>
             <div id="section-seven">
-                <div class="final-buttons bg-red">
+                <div id="netflix-btn" class="final-buttons bg-red">
                     <h6>Netflix</h6>
                 </div>
-                <div class="final-buttons">
+                <div id="info-btn" class="final-buttons">
                     <h6>i</h6>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

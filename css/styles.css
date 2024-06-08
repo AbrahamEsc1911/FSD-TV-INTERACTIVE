@@ -20,7 +20,7 @@ body {
     height: 100vh;
     width: 30vw;
 
-    background-color: blueviolet;
+    background-color: rgb(43, 226, 174);
 
     display: flex;
     justify-content: center;
@@ -35,6 +35,7 @@ body {
 
     border-radius: 1.5em;
 }
+
 /* 
 IR-SECTION */
 
@@ -244,7 +245,7 @@ IR-SECTION */
     width: 2em;
 
     border-radius: 1em 1em 0 0;
-/* 
+    /* 
     background-color: blue; */
 
     display: flex;
@@ -313,7 +314,7 @@ IR-SECTION */
     height: 1.6em;
     width: 2em;
 
-    border-radius: 0 0  1em 1em;
+    border-radius: 0 0 1em 1em;
 
     /* background-color: blue; */
 
@@ -377,7 +378,7 @@ IR-SECTION */
     flex-direction: row;
 }
 
-.final-buttons{
+.final-buttons {
     height: 2em;
     width: 3.2em;
 
@@ -404,7 +405,7 @@ IR-SECTION */
     height: 100vh;
     width: 70vw;
 
-    background-color: orange;
+    background-color: rgb(234, 234, 234);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -447,13 +448,102 @@ IR-SECTION */
     justify-content: center;
 }
 
-#bg-Screen {
+.volumen1 {
+    height: 4.25em;
+    width: 0.5em;
+
+    background-color: blue;
+    border-radius: 1em;
+    z-index: 3;
+}
+
+.volumen2 {
+    height: 8.5em;
+    width: 0.5em;
+
+    background-color: blue;
+    border-radius: 1em;
+    z-index: 3;
+}
+
+.volumen3 {
+    height: 12.75em;
+    width: 0.5em;
+
+    background-color: blue;
+    border-radius: 1em;
+    z-index: 3;
+}
+
+.volumen4 {
+    height: 17em;
+    width: 0.5em;
+
+    background-color: blue;
+    border-radius: 1em;
+    z-index: 3;
+}
+
+#volumen {
+    background-color: blue;
+    border-radius: 1em;
+    z-index: 3;
+}
+
+.volumen-hide {
+    visibility: hidden;
+    transition: all 0;
+    display: none;
+}
+
+.volumen-hide-transition {
+    visibility: hidden;
+    transition-duration: 1s;
+}
+
+#Screen {
     height: 25em;
     width: 44em;
 
     margin-bottom: 1em;
 
     background-color: black;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    position: absolute;
+    z-index: 1;
+}
+
+#info {
+    height: 2em;
+    width: 10em;
+
+    /* background-color: blueviolet; */
+    color: white;
+    font-weight: bolder;
+
+    margin-left: 30em;
+    margin-bottom: 22em;
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.info-hide {
+    display: none;
+    visibility: hidden;
+}
+
+.hide-info-temporary {
+    display: none;
+    visibility: hidden;
 }
 
 /* IR SECTION */
@@ -461,7 +551,7 @@ IR-SECTION */
 #bg-ir-tv {
     height: 0.7em;
     width: 45em;
-/* 
+    /* 
     background-color: green; */
 
     display: flex;
@@ -469,16 +559,38 @@ IR-SECTION */
     align-items: flex-start;
 }
 
-#bg-ir{
+#bg-ir {
     height: 0.7em;
     width: 12em;
 
     background-color: rgb(5, 5, 5);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.tv-led-off {
+    height: 0.3em;
+    width: 0.3em;
+
+    border-radius: 50%;
+
+    background-color: rgb(255, 0, 0);
+}
+
+.tv-led-on {
+    height: 0.3em;
+    width: 0.3em;
+
+    border-radius: 50%;
+
+    background-color: rgb(38, 255, 0);
 }
 
 /* SUPPORT TV */
 
-#section-tv-three{
+#section-tv-three {
     height: 3.7em;
     width: 45em;
 
@@ -507,11 +619,40 @@ IR-SECTION */
     justify-content: center;
 }
 
-#bg-base-tv{
+#bg-base-tv {
     height: 0.6em;
     width: 28em;
 
     border-radius: 2em 2em 0.1em 0.1em;
 
     background-color: black;
+}
+
+.general-buttons:hover {
+    cursor: pointer;
+    background-color: rgba(106, 106, 106, 0.224);
+    transition: all 0.5s;
+}
+
+/* VIDEOS */
+
+#size-screen {
+    height: 25em;
+    width: 44em;
+
+}
+
+#Canal {
+    height: 3em;
+    width: 42em;
+
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+
+    margin-top: 1em;
+    padding-left: 2em;
+    border-radius: 2em;
+
+    position: absolute;
+
 }
