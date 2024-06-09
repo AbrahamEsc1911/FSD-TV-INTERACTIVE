@@ -6,12 +6,14 @@ let arrayBtns = Array.from(btns);
 
 let netflix = document.getElementById("netflix-btn");
 let infobtn = document.getElementById("info-btn")
+let infobtnCenter = document.getElementById("info-center")
 let today = new Date();
 let day = today.getDate();
 let month = today.getMonth() + 1;
 let year = today.getFullYear();
 let currentDate = `${day} / ${month} / ${year}`;
 let infoDate = document.getElementById("info")
+
 
 // SCREEN
 let screen = document.getElementById("Screen");
@@ -21,11 +23,19 @@ let chanelUp = document.getElementById("chanel-up");
 let countUp = 1;
 let chanelDown = document.getElementById("chanel-down");
 
+// CHANNEL PANEL CIRCULAR RL
+let chanelUpRight = document.getElementById("chanel-up-right");
+let chanelDownLeft = document.getElementById("chanel-down-left");
+
 // VOLUMEN
 let volUp = document.getElementById("vol-up");
 let volDown = document.getElementById("vol-down");
 let countVol = 0;
 let volumenTotal = document.getElementById("volumen")
+
+// VOLUMEN PANEL CIRCULAR TB
+let volUpTop = document.getElementById("vol-up-top");
+let volDownBottom = document.getElementById("vol-down-bottom");
 
 
 
@@ -54,8 +64,8 @@ netflix.addEventListener("click", () => {
         : null
 })
 
-{/* <video id="size-screen" autoplay muted loop><source src="./img/ch6.mp4" type="video/mp4">
-Your browser does not support the video tag.</video> */}
+/* <video id="size-screen" autoplay muted loop><source src="./img/ch6.mp4" type="video/mp4">
+Your browser does not support the video tag.</video> /////////// Este elemento es en caso de cambiar los gifs a videos, esté será el elemento que me permitiría incluirlos en el DOM*/
 
 
 chanelUp.addEventListener("click", () => {
@@ -72,6 +82,30 @@ chanelUp.addEventListener("click", () => {
 })
 
 chanelDown.addEventListener("click", () => {
+    if (interruptor && countUp >= 2) {
+        countUp -= 1 
+        screen.innerHTML = `<img id="size-screen" src="./img/ch${countUp}.gif" alt="inicial"><div id="Canal">Canal ${countUp}</div>`
+    } else if (interruptor && countUp <= 2) {
+        screen.innerHTML = `<img id="size-screen" src="./img/ch${countUp}.gif" alt="inicial"><div id="Canal">Canal ${countUp}</div>`
+    } else {
+        null
+    }
+})
+
+chanelDownLeft.addEventListener("click", () => {
+
+    if (interruptor && countUp <= 5) {
+        countUp += 1
+        screen.innerHTML = `<img id="size-screen" src="./img/ch${countUp}.gif" alt="inicial"><div id="Canal">Canal ${countUp}</div>`
+    } else if (interruptor && countUp >= 5) {
+        screen.innerHTML = `<img id="size-screen" src="./img/ch${countUp}.gif" alt="inicial"><div id="Canal">Canal ${countUp}</div>`
+    } else {
+        null
+    }
+
+})
+
+chanelUpRight.addEventListener("click", () => {
     if (interruptor && countUp >= 2) {
         countUp -= 1 
         screen.innerHTML = `<img id="size-screen" src="./img/ch${countUp}.gif" alt="inicial"><div id="Canal">Canal ${countUp}</div>`
@@ -117,9 +151,52 @@ volDown.addEventListener("mouseleave", () => {
     volumenTotal.classList.add("volumen-hide-transition")
 })
 
+volUpTop.addEventListener("click", () => {
+    volumenTotal.classList.remove("volumen-hide-transition") 
+    if (interruptor && countVol <= 3) {
+        countVol += 1
+        volumenTotal.classList.add(`volumen${countVol}`)
+        volumenTotal.innerHTML = ``
+        console.log(volumenTotal)
+    } else {
+        null
+    }
+})
+
+volDownBottom.addEventListener("click", () => {
+    volumenTotal.classList.remove("volumen-hide-transition")
+    if(interruptor && countVol >= 1){
+        countVol = countVol - 1
+        volumenTotal.classList.remove(`volumen${countVol+1}`)
+        volumenTotal.innerHTML = ``
+        console.log(`le he dado al vol down y count vale ${countVol}`)
+    } else if (interruptor && countVol == 0) {
+        volumenTotal.innerHTML = `<img id="volumen" src="./img/mute.png" alt="mute">`
+    } else {
+        null
+    }
+        
+})
+
+volUpTop.addEventListener("mouseleave", () => {
+    volumenTotal.classList.add("volumen-hide-transition")
+})
+
+volDownBottom.addEventListener("mouseleave", () => {
+    volumenTotal.classList.add("volumen-hide-transition")
+})
 
 
 infobtn.addEventListener("click", () => {
+    if (interruptor) {
+        infoDate.classList.toggle("hide-info-temporary")
+        infoDate.innerHTML = `<p>fecha: ${currentDate}</p>`
+    } else {
+        null
+    }
+})
+
+infobtnCenter.addEventListener("click", () => {
     if (interruptor) {
         infoDate.classList.toggle("hide-info-temporary")
         infoDate.innerHTML = `<p>fecha: ${currentDate}</p>`
