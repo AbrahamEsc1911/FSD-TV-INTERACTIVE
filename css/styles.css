@@ -20,8 +20,8 @@ body {
     height: 100vh;
     width: 30vw;
 
-    background-color: rgb(43, 226, 174);
-
+    background-color: rgb(108, 251, 13);
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,6 +34,18 @@ body {
     background: linear-gradient(to bottom left, rgba(91, 91, 91, 0.986), black);
 
     border-radius: 1.5em;
+
+    box-shadow: 0.5em 0.5em 1em rgb(56, 153, 0);
+}
+
+.btn-hover:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.09);
+}
+
+.netflix-hover:hover {
+    cursor: pointer;
+    background-color: rgba(251, 0, 0, 0.692);
 }
 
 /* 
@@ -75,6 +87,14 @@ IR-SECTION */
 
     border-radius: 50%;
     box-shadow: 0.3em 0.3em 0.3em rgba(0, 0, 0, 0.176);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#turn-button-section:hover {
+    cursor: pointer;
+    background-color: rgb(76, 76, 76);
 }
 
 #section-three {
@@ -405,7 +425,7 @@ IR-SECTION */
     height: 100vh;
     width: 70vw;
 
-    background-color: rgb(234, 234, 234);
+    background-color: rgb(25, 25, 25);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -500,6 +520,7 @@ IR-SECTION */
     visibility: hidden;
     transition-duration: 1s;
 }
+
 
 #Screen {
     height: 25em;
@@ -603,9 +624,9 @@ IR-SECTION */
 
 #bg-tv-support {
     height: 3.7em;
-    width: 2em;
+    width: 8em;
 
-    background-color: black;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.986), rgba(0, 0, 0, 0));
 }
 
 #section-tv-four {
@@ -640,7 +661,8 @@ IR-SECTION */
     height: 25em;
     width: 44em;
 
-}
+    box-shadow: 0.5em 0.5em 10em rgba(255, 255, 255, 0.116);
+}   
 
 #Canal {
     height: 3em;
@@ -655,4 +677,229 @@ IR-SECTION */
 
     position: absolute;
 
+}
+
+/* MEDIA QUERS */
+
+
+@media (max-width:1200px) {
+
+    body {
+        height: 100vh;
+        width: 100vw;
+
+        margin: 0;
+        padding: 0;
+
+        background-color: rgb(86, 86, 86);
+
+        font-family: Arial, Helvetica, sans-serif;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .bg-tv {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #body-tv {
+        width: 100vw;
+        height: 100vh;
+
+        padding-top: 5%;
+        padding-bottom: 5%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .bg-control {
+        width: 100vw;
+        height: 100vh;
+
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+
+}
+
+@media(max-width:925px) {
+    #bg-frame-tv {
+        height: 22em;
+        width: 40em;
+
+        border-radius: 0.5em;
+        background: linear-gradient(rgba(112, 112, 112, 0.97), rgba(0, 0, 0, 0.977));
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bg-tv {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #Screen {
+        height: 20em;
+        width: 39em;
+
+        margin-bottom: 1em;
+
+        background-color: black;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        position: absolute;
+        z-index: 1;
+    }
+    #size-screen {
+        height: 20em;
+        width: 39em;
+    
+    }
+
+    #section-tv-one {
+        height: 22em;
+        width: 40em;
+    }
+}
+
+@media (max-width:725px) {
+
+    #body-tv {
+        height: auto;
+        width: 100vw;
+    }
+
+    .bg-tv{
+        height: auto;
+        width: 100vw;
+    }
+
+    #section-tv-one {
+        height: auto;
+        width: 100vw;
+    }
+
+    #bg-frame-tv{
+        height: 17.8em;
+        width: 32em;
+
+        border-radius: 0.5em;
+        background: linear-gradient(rgba(112, 112, 112, 0.97), rgba(0, 0, 0, 0.977));
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    #Screen {
+        height: 16em;
+        width: 31.2em;
+
+        margin-bottom: 1em;
+
+        background-color: black;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        position: absolute;
+        z-index: 1;
+    }
+    #size-screen {
+        height: 16em;
+        width: 31.2em;
+    }
+
+    #section-tv-two{
+        height: auto;
+        width: 100vw;
+    }
+    #bg-ir-tv {
+        height: auto;
+        width: 100vw;
+    }
+
+    #section-tv-three{
+        height: auto;
+        width: 100vw;
+    }
+}
+
+@media (max-width:525px) {
+
+    #body-tv {
+        height: auto;
+        width: 100vw;
+    }
+
+    .bg-tv{
+        height: auto;
+        width: 100vw;
+    }
+
+    #section-tv-one {
+        height: auto;
+        width: 100vw;
+    }
+
+    #bg-frame-tv{
+        height: 14.36em;
+        width: 25.6em;
+
+        border-radius: 0.5em;
+        background: linear-gradient(rgba(112, 112, 112, 0.97), rgba(0, 0, 0, 0.977));
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    #Screen {
+        height: 12.8em;
+        width: 24.58em;
+
+        margin-bottom: 1em;
+
+        background-color: black;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        position: absolute;
+        z-index: 1;
+    }
+
+    #size-screen {
+        height: 12.8em;
+        width: 24.58em;
+    }
+
+    #section-tv-two{
+        height: auto;
+        width: 100vw;
+    }
+    #bg-ir-tv {
+        height: auto;
+        width: 100vw;
+    }
+
+    #section-tv-three{
+        height: auto;
+        width: 100vw;
+    }
 }
