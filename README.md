@@ -65,7 +65,7 @@ Additional adjustments will be made to the volume control system, in order to co
 
 To deploy this project:
 
-[Live Demo](https://github.com/AbrahamEsc1911)
+[Live Demo](https://abrahamesc1911.github.io/FSD-TV-INTERACTIVE/)
 
 
 ## Author ✒️
